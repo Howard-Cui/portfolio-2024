@@ -8,6 +8,7 @@ import { IoClose } from "react-icons/io5";
 import SideMenu from './SideMenu';
 import dynamic from 'next/dynamic.js';
 import { ServersideIconBtnSet } from '../IconBtnSet';
+import { animated } from '@react-spring/web'
 
 
 const IconBtnSet = dynamic(() => import("../IconBtnSet").then(mod => mod.IconBtnSet), {
@@ -25,11 +26,16 @@ const navList = [
 export const Navigators = () => navList.map(item => {
   return (
     <div
-    className='hover:text-high-light hover:border-high-light-second
-    border-b-[2px] border-b-[transparent] z-[1000] list-none font-[500]
-    active:scale-[90%]'
-    key={item.title}>
-      <Link href={item.route}>{item.title}</Link>
+      className='hover:text-high-light z-[1000] list-none font-[500] active:scale-[90%] relative group'
+      key={item.title}
+    >
+      <Link
+        href={item.route}
+      >
+        {item.title}
+      </Link>
+      <div className='border-b-[4px] border-b-high-light-second transition-transform duration-700 ease-out 
+      transform origin-left-to-right scale-x-0 group-hover:scale-x-100 group-hover:w-full w-0'/>
     </div>
   )
 })
@@ -44,8 +50,10 @@ const Navbar = () => {
 
   return (
     <nav className='setted-width h-[70px] flex justify-between items-center mt-9'>
-        <h1 className='font-bold text-[25px]  first-letter:text-high-light-second'>
+        <h1 className='font-bold text-[25px] group first-letter:text-high-light-second relative'>
           Howard Cui
+          <div className='border-b-[4px] border-b-high-light-second transition-transform duration-700 ease-out 
+          transform origin-left-to-right scale-x-0 group-hover:scale-x-100 group-hover:w-full w-0'/>
         </h1>
 
         {
@@ -59,7 +67,7 @@ const Navbar = () => {
           />
           : (
           <>
-            <div className='flex justify-between gap-8 font-[500]'>
+            <div className='flex justify-between items-center gap-8 font-[500]'>
               {
                 <Navigators/>
               }

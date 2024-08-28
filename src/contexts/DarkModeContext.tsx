@@ -13,6 +13,7 @@ DarkModeContext.displayName = "DarkModeContext"
 
 const DarkThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [ darkMode, setDarkMode ] = useState(true); 
+
   useEffect(() => {
     const root = window.document.documentElement;
     if (darkMode) {

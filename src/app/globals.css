@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+  .theme-text {
+    background-image: linear-gradient(45deg, #619cfa, #fc5dcd);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .setted-width {
+    @apply 2xl:w-[1228px] lg:w-[80%] md:w-[819px] w-[95vw];
+  }
+
+  .scale-x-0 {
+    transform: scaleX(0);
+  }
+  .scale-x-100 {
+    transform: scaleX(1);
+  }
+}

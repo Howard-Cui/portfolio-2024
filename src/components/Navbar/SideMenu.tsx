@@ -26,7 +26,7 @@ const SideMenu = ({
 }
 
 export const Aside = ({ Navigators } : {Navigators: ReactNode}) => (<aside className='fixed left-0 top-0 w-[60vw] h-[100vh] 
-  dark:bg-bg-[#ffffff] z-[300000] animate-menuIn origin-left-to-right
+  dark:bg-bg-[#ffffff] z-[300000] animate-menuIn t
   bg-bg-dark text-[#ffffff] flex flex-col justify-evenly gap-9 items-center'>
     <div className='w-[100px]'>
       <IconBtnSet/>

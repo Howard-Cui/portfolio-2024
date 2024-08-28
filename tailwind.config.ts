@@ -15,10 +15,10 @@ const config: Config = {
     keyframes: {
       buttonAnimation: {
         "0%": {
-          transform: "scaleX(0)"
+          width: '0'
         },
         "100%": {
-          transform: "scaleX(1)"
+          width: '100px' 
         }
       },
       menuIn: {
@@ -49,7 +49,7 @@ const config: Config = {
       }
     },
     animation: {
-      buttonAnimation: 'buttonAnimation 2s ease-in-out 1',
+      buttonAnimation: 'buttonAnimation 2s ease-in-out 1 alternate',
       menuIn: 'menuIn 0.3s ease-in-out 1 alternate',
       bounceText: 'bounceText 1s linear infinite alternate 0s',
       topTicketEntry: 'topTicketEntry 0.5s ease-in',

@@ -12,6 +12,7 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.4",
     "next": "14.2.6",
     "react": "^18",
     "react-dom": "^18",

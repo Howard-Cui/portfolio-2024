@@ -31,7 +31,7 @@ const PageLayoutProvider = ({
   },[])
 
   return (
-    <div className='flex flex-col gap-6 setted-width text-[20px]'>
+    <div className='flex flex-col gap-6 text-[20px] w-full'>
       <div className={`flex justify-center fixed left-0 top-0 w-[100vw] 
       dark:bg-bg-dark bg-bg-light ${navColorChanged ? "opacity-95" : ""} z-[10000]`}>
         <Navbar/>

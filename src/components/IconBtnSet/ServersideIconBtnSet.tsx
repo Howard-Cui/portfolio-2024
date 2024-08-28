@@ -1,8 +1,6 @@
 import React from 'react'
-import { IconButton, ServersideIconButton } from '@/components/Button'
-import { useDarkTheme } from '@/contexts';
+import { ServersideIconButton } from '@/components/Button'
 import { FiGithub, FiSun } from 'react-icons/fi';
-import { FaMoon } from 'react-icons/fa';
 import { RiLinkedinFill } from 'react-icons/ri';
 
 const IconBtnSet = () => {
